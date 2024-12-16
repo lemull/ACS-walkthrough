@@ -10,31 +10,34 @@ This repository contains data, code, and results for the study investigating the
 -  Phenotype Tables: Summarizing phenotypic data using descriptive statistics.
 -  Time-point Comparisons: Methylation analysis at 1 month and 18 months after birth.
 
-## Workflow：
 
-ACS/  
-│  
-├── Data/  
-│   └── raw/                   # All initial raw data files  
-│  
-├── Code/  
-│   ├── 00Select_Sample.R      # Selects and filters samples for analysis  
-│   ├── 01Sample_sheet.R       # Generates sample sheets for methylation analysis  
-│   ├── 02Copy_idat.R          # Copies and organizes idat files for selected samples  
-│   ├── 03modify_SampleSheet.R # Modifies and updates sample sheets (e.g., metadata fixes)  
-│   ├── 04ChAMP.R              # Runs the ChAMP pipeline for preprocessing methylation data  
-│   ├── Descriptive_table.R    # Generates descriptive phenotype tables for the selected data  
-│   ├── Mix_effect_model.R     # Applies linear mixed-effects models to assess CpG-phenotype associations  
-│   └── PCG/                   # Contains PCG pipeline scripts for EWAS and GO analysis  
-│  
-├── Methylation_1/             # DNA methylation data and sample sheet for 1-month samples  
-│   ├── Methylation_1.csv      # Sample sheet for Methylation_1  
-│   └── idat_files/            # DNA methylation idat files for selected samples  
-│  
-├── Methylation_18/            # DNA methylation data and sample sheet for 18-month samples  
-│   ├── Methylation_18.csv     # Sample sheet for Methylation_18  
-│   └── idat_files/            # DNA methylation idat files for selected samples  
-│  
-├── Result/                    # Outputs: tables, plots, and analysis results  
-│  
-└── README.md                  # Project documentation file  
+<h2>Workflow：</h2>
+
+<pre>
+ACS/
+│
+├── Data/
+│   └── raw/                   # All initial raw data files
+│
+├── Code/
+│   ├── 00Select_Sample.R      # Selects and filters samples for analysis
+│   ├── 01Sample_sheet.R       # Generates sample sheets for methylation analysis
+│   ├── 02Copy_idat.R          # Copies and organizes idat files for selected samples
+│   ├── 03modify_SampleSheet.R # Modifies and updates sample sheets (e.g., metadata fixes)
+│   ├── 04ChAMP.R              # Runs the ChAMP pipeline for preprocessing methylation data
+│   ├── Descriptive_table.R    # Generates descriptive phenotype tables for the selected data
+│   ├── Mix_effect_model.R     # Applies linear mixed-effects models to assess CpG-phenotype associations
+│   └── PCG/                   # Contains PCG pipeline scripts for EWAS and GO analysis
+│
+├── Methylation_1/             # DNA methylation data and sample sheet for 1-month samples
+│   ├── Methylation_1.csv      # Sample sheet for Methylation_1
+│   └── idat_files/            # DNA methylation idat files for selected samples
+│
+├── Methylation_18/            # DNA methylation data and sample sheet for 18-month samples
+│   ├── Methylation_18.csv     # Sample sheet for Methylation_18
+│   └── idat_files/            # DNA methylation idat files for selected samples
+│
+├── Result/                    # Outputs: tables, plots, and analysis results
+│
+└── README.md                  # Project documentation file
+</pre>
