@@ -1,12 +1,17 @@
-Project Description
+## Project Description
 
 This repository contains data, code, and results for the study investigating the effects of Antenatal Corticosteroids (ACS) exposure on newborns' DNA methylation and their association with key phenotypes. The project involves preprocessing DNA methylation data, running Epigenome-Wide Association Studies (EWAS), and performing pathway and gene enrichment analyses to uncover significant biological patterns.
 
-Data Preprocessing: Using Champ pipeline for raw data processing and probe-level extraction, and PCG pipeline for EWAS analysis.
-Statistical Modeling: Linear mixed-effects models to evaluate the association between CpG methylation and phenotypes.
-Pathway Analysis: Gene Ontology (GO) enrichment analysis and GSEA to identify biological pathways.
-Phenotype Tables: Summarizing phenotypic data using descriptive statistics.
-Time-point Comparisons: Methylation analysis at 1 month and 18 months after birth.
+# Summary
+-  Data Preprocessing: Generate sample sheets（Code/01Sample_sheet.R）.
+-  Data Processing： Using Champ pipeline for raw data processing （Rscript Code/04ChAMP.R） and probe-level extraction, and PCG pipeline for EWAS analysis（Scripts in Code/PCG/）.
+-  Statistical Modeling: Linear mixed-effects models to evaluate the association between CpG methylation and phenotypes（Rscript Code/Mix_effect_model.R）.
+-  Pathway Analysis: Gene Ontology (GO) enrichment analysis and GSEA to identify biological pathways.
+-  Phenotype Tables: Summarizing phenotypic data using descriptive statistics.
+-  Time-point Comparisons: Methylation analysis at 1 month and 18 months after birth.
+
+
+# Workflow：
 ACS/
 │
 ├── Data/  
@@ -22,15 +27,14 @@ ACS/
 │   ├── Mix_effect_model.R     # Applies linear mixed-effects models to assess CpG-phenotype associations
 │   └── PCG/                   # Contains PCG pipeline scripts for EWAS and GO analysis
 │
-├── Methylation_1/  
-│   ├── Methylation_1.csv      # Sample sheet for Methylation_1 (1 month post-birth)  
-│   └── idat_files/            # DNA methylation idat files for selected samples  
+├── Methylation_1/             # DNA methylation data and sample sheet for 1-month samples
+│   ├── Methylation_1.csv      # Sample sheet for Methylation_1
+│   └── idat_files/            # DNA methylation idat files for selected samples
 │
-├── Methylation_18/  
-│   ├── Methylation_18.csv     # Sample sheet for Methylation_18 (18 months post-birth)  
-│   └── idat_files/            # DNA methylation idat files for selected samples  
+├── Methylation_18/            # DNA methylation data and sample sheet for 18-month samples
+│   ├── Methylation_18.csv     # Sample sheet for Methylation_18
+│   └── idat_files/            # DNA methylation idat files for selected samples
 │
 ├── Result/                    # Outputs: tables, plots, and analysis results
 │
-└── README.md                  # Documentation file
-
+└── README.md                  # Project documentation file
