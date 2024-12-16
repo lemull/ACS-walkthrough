@@ -7,21 +7,21 @@ Statistical Modeling: Linear mixed-effects models to evaluate the association be
 Pathway Analysis: Gene Ontology (GO) enrichment analysis and GSEA to identify biological pathways.
 Phenotype Tables: Summarizing phenotypic data using descriptive statistics.
 Time-point Comparisons: Methylation analysis at 1 month and 18 months after birth.
-
 ACS/
 │
-├── Data/                      # Contains all initial raw data (metadata)
+├── Data/  
+│   └── raw/                   # All initial raw data files
 │
 ├── Code/  
-│   ├── 00Select_Sample.R      # Select desir samples and filters samples for analysis: preterm (<37wk); received at least 1 treatment; have both visit (before 1 moth and after 18 month) 
+│   ├── 00Select_Sample.R      # Selects and filters samples for analysis
 │   ├── 01Sample_sheet.R       # Generates sample sheets for methylation analysis
 │   ├── 02Copy_idat.R          # Copies and organizes idat files for selected samples
-│   ├── 03modify_SampleSheet.R # Modifies and updates sample sheets (e.g. add covariate, metadata fixes)
+│   ├── 03modify_SampleSheet.R # Modifies and updates sample sheets (e.g., metadata fixes)
 │   ├── 04ChAMP.R              # Runs the ChAMP pipeline for preprocessing methylation data
 │   ├── Descriptive_table.R    # Generates descriptive phenotype tables for the selected data
 │   ├── Mix_effect_model.R     # Applies linear mixed-effects models to assess CpG-phenotype associations
 │   └── PCG/                   # Contains PCG pipeline scripts for EWAS and GO analysis
-│ 
+│
 ├── Methylation_1/  
 │   ├── Methylation_1.csv      # Sample sheet for Methylation_1 (1 month post-birth)  
 │   └── idat_files/            # DNA methylation idat files for selected samples  
@@ -30,10 +30,7 @@ ACS/
 │   ├── Methylation_18.csv     # Sample sheet for Methylation_18 (18 months post-birth)  
 │   └── idat_files/            # DNA methylation idat files for selected samples  
 │
-├── Result/  
-│   ├── ew_results/            # EWAS results (significant CpGs, beta values)  
-│   ├── go_analysis/           # GO enrichment analysis outputs  
-│   ├── gsea_results/          # GSEA results for biological pathways  
-│   └── visualization/         # Plots and summary datasets  
+├── Result/                    # Outputs: tables, plots, and analysis results
 │
-└── README.md                  # Project documentation  
+└── README.md                  # Documentation file
+
