@@ -4,6 +4,9 @@ load("~/Desktop/Data/Behavior.RData")
 #  select preterm baby 
 filtered_data <- trial_data_final_filtered %>%
   filter(baby_gest_at_birth < 37)
+
+##### result of filter: 209 #####
+##### actual from /Volumes/Pegasus32R8/dHCP/genomics_sample03/Users/nickharper/cdb/Methylation_firstvisit : 144 #####
 head(filtered_data)
 
 
